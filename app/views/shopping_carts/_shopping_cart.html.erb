@@ -1,5 +1,6 @@
 <% if can? :create, Order %>
-<li>
-  <%=link_to('Cart', '/shopping_cart') %> (<%=shopping_cart_how_many_tickets()%>)
+<li class="nav-link">
+  <%=link_to 'Cart', '/shopping_cart',style:"all:unset" %>
+  (<%=shopping_cart_how_many_tickets()%>)
 </li>
 <% end %>
