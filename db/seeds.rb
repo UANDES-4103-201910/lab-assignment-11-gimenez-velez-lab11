@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 users = [User.new(name:'Administrator', lastname:'User', \
               password:'123456', email:'admin@uandes.cl', \
-              role:'administrator',
-              address:'San Carlos de Apoquindo'), 
+              role:'admin',
+              address:'San Carlos de Apoquindo'),
          User.new(name:'Registered', lastname:'User', \
               password:'123456', email:'reguser@miuandes.cl', \
               address:'San Carlos de Apoquindo'),
@@ -18,15 +18,15 @@ users = [User.new(name:'Administrator', lastname:'User', \
 
 for u in users do
   u.save!
-end 
+end
 
 event_venues = [EventVenue.new(name: 'Estadio Nacional', address:'Maraton', capacity: 60000),\
                 EventVenue.new(name: 'Estadio Monumental', address:'Exequiel', capacity: 25000),\
                 EventVenue.new(name: 'Movistar Arena', address:'Matta', capacity: 15000)]
-                
+
 for ev in event_venues do
   ev.save!
-end 
+end
 
 events = [Event.new(name:'Festival de la Cancion', description: 'Puro reggaeton',\
           start_date: '2019-09-01', event_venue: event_venues[0]),
@@ -37,7 +37,7 @@ events = [Event.new(name:'Festival de la Cancion', description: 'Puro reggaeton'
 
 for e in events do
   e.save!
-end 
+end
 
 ticket_zones = [TicketZone.new(zone: 'Cancha'),\
                 TicketZone.new(zone: 'Pacifico'),\
@@ -45,7 +45,7 @@ ticket_zones = [TicketZone.new(zone: 'Cancha'),\
 
 for tz in ticket_zones do
   tz.save!
-end 
+end
 
 prices = [20000, 30000, 40000]
 
@@ -61,7 +61,7 @@ end
 
 for tt in ticket_types do
   tt.save!
-end 
+end
 
 for u in users do
   for e in events do
@@ -73,5 +73,3 @@ for u in users do
     t.save!
   end
 end
-
-
